@@ -1,0 +1,11 @@
+# Prevent execution of PHP or any scripts in this directory
+<FilesMatch "\.(php|php3|php4|php5|phtml|pl|py|jsp|asp|sh|cgi)$">
+    Require all denied
+</FilesMatch>
+
+# Only allow image files
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg)$">
+    Require all granted
+</FilesMatch>
+
+Options -Indexes
